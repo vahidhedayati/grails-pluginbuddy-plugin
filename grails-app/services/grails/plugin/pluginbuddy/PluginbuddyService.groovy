@@ -1,16 +1,12 @@
-package grails.pluginbuddy.plugin
+package grails.plugin.pluginbuddy
 
-class PluginBuddyTagLib {
-	static namespace = "enduser"
-	
+import grails.transaction.Transactional
+
+
+class PluginbuddyService {
 	def grailsApplication
 	
-	def verifyAppVersion={attrs, body ->
-		def gfolder=returnAppVersion()
-		out << gfolder
-	}
-	
-	private String returnAppVersion() {
+	 def returnAppVersion() {
 		def gver=grailsApplication.metadata['app.grails.version']
 		double verify=getGrailsVersion(gver)
 		def gfolder="resources"
@@ -21,10 +17,11 @@ class PluginBuddyTagLib {
 	}
 	
 	// Returns users grails version
-	private getGrailsVersion(String appVersion) {
+	def getGrailsVersion(String appVersion) {
 		if (appVersion && appVersion.indexOf('.')>-1) {
 			int lastPos=appVersion.indexOf(".", appVersion.indexOf(".") + 1)
 			double verify=appVersion.substring(0,lastPos) as double
 		}
 	}
+
 }

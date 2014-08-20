@@ -131,8 +131,13 @@ Taglib call: (derived bove calls)
 
 OR within your own taglib:
 
-```
-	def gfolder=returnAppVersion()
+```groovy
+	class SomethingController {
+		def pluginbuddyService
+		def myAction() { 	
+			def gfolder=pluginbuddyService.returnAppVersion()
+		}
+	}	
 ```
 
 This will return assets/resources.
@@ -142,9 +147,13 @@ This will return assets/resources.
 More primitive call version returned as double:
 
 ```
+// inject service in another service/controller:
+def pluginbuddyService
+	//call method to get users app id in double format:
 		def gver=grailsApplication.metadata['app.grails.version']
-		double verify=getGrailsVersion(gver)
+		double verify=pluginbuddyService.getGrailsVersion(gver)
 ```
+
 
 
 
