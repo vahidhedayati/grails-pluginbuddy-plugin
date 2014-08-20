@@ -1,6 +1,5 @@
 package grails.plugin.pluginbuddy
 
-import grails.transaction.Transactional
 
 
 class PluginbuddyService {
