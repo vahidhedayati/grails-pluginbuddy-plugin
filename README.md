@@ -26,7 +26,7 @@ How to use within your views:
 	<meta name='layout' content="main"/>
 </g:if>
 <g:else>
-	<g:if test="${pluginBuddy.verifyAppVersion().equals('resources')}">
+	<g:if test="${enduser.verifyAppVersion().equals('resources')}">
 		<meta name='layout' content="mailingListMini"/>
 	</g:if>	
 	<g:else>
@@ -98,7 +98,7 @@ Our resources sitemesh - typicall with defer so really for ajax call within anot
 ## Tedious repeated work slightly easier:
 
 ```gsp
-<g:if test="${pluginBuddy.verifyAppVersion().equals('resources')}">
+<g:if test="${enduser.verifyAppVersion().equals('resources')}">
 <img src="${resource(dir: 'images', file: 'run.png')}" data-tooltip="${message(code: 'default.run.job.label', default: 'Run job')}" alt="${message(code: 'default.run.job.label', default: 'Run job')}"/>
 </g:if>
 <g:else>
@@ -110,7 +110,7 @@ Another example loading css/js per app style....
 ```gsp
 
 
-<g:if test="${pluginBuddy.verifyAppVersion().equals('resources')}">
+<g:if test="${enduser.verifyAppVersion().equals('resources')}">
 	<link rel="stylesheet" href="${createLink(uri: '/css/bootstrap.min.css')}" type="text/css">
 	<script src="${createLink(uri: '/js/bootstrap.min.js')}" type="text/javascript"></script>
 </g:if>
