@@ -19,6 +19,12 @@ Add this to  your plugin dependency within your BuildConfig.groovy of your own p
 ## Current plugins using pluginbuddy:
 [wschat](https://github.com/vahidhedayati/grails-wschat-plugin)
 
+[modaldynamix](https://github.com/vahidhedayati/modaldynamix)
+
+[mailinglist](https://github.com/vahidhedayati/mailinglist)
+
+[jssh](https://github.com/vahidhedayati/jssh)
+
 
 I am going to use the work from the mailing list as an example:
 [grails-app/views/mailingListSchedule/list2.gsp](https://github.com/vahidhedayati/mailinglist/blob/master/grails-app/views/mailingListSchedule/list2.gsp)
