@@ -1,4 +1,4 @@
-pluginbuddy 0.1
+pluginbuddy 0.2
 =========
 
 Grails plugin buddy. This does not deserve to be a plugin but it saves repeating a few lines of code each and every time and can be very useful for writing views depending on end users default grails application. As a plugin developer it will require some repeat calls in different styles but can ensure your plugin views are compatible with resourcees assets based sites.
@@ -9,11 +9,16 @@ Once it is release I will remove some of my own trials/tribulations and complexe
 
 Dependency :
 ```groovy
-	compile ":pluginbuddy:0.1", { export=false } 
+	build ":pluginbuddy:0.2", { export=false } 
 ```
 
 
 Add this to  your plugin dependency within your BuildConfig.groovy of your own plugin,
+
+
+## Current plugins using pluginbuddy:
+[wschat](https://github.com/vahidhedayati/grails-wschat-plugin)
+
 
 I am going to use the work from the mailing list as an example:
 [grails-app/views/mailingListSchedule/list2.gsp](https://github.com/vahidhedayati/mailinglist/blob/master/grails-app/views/mailingListSchedule/list2.gsp)
@@ -154,6 +159,14 @@ def pluginbuddyService
 		double verify=pluginbuddyService.getGrailsVersion(gver)
 ```
 
+##Version info:
+```
+0.2 : 	Tidy up plugin title in main plugin definition.
+		Added returnObjectForTags in taglib
+		
+0.1	:	initial release
+
+```	
 
 
 
