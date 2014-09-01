@@ -1,4 +1,4 @@
-pluginbuddy 0.2
+pluginbuddy 0.3
 =========
 
 Grails plugin buddy. This does not deserve to be a plugin but it saves repeating a few lines of code each and every time and can be very useful for writing views depending on end users default grails application. As a plugin developer it will require some repeat calls in different styles but can ensure your plugin views are compatible with resourcees assets based sites.
@@ -9,7 +9,7 @@ Once it is release I will remove some of my own trials/tribulations and complexe
 
 Dependency :
 ```groovy
-	build ":pluginbuddy:0.2", { export=false } 
+	runtime ':pluginbuddy:0.3'
 ```
 
 
@@ -168,7 +168,7 @@ def pluginbuddyService
 ##Version info:
 ```
 0.3	: 	0.2 appeared to only display assets for some strange reason on resources sites it showed up blank.
-		Hopefully fixed now.
+		Hopefully fixed now. I think the issue relates to it being called via runtime...
 
 0.2 : 	Tidy up plugin title in main plugin definition.
 		Added returnObjectForTags in taglib
