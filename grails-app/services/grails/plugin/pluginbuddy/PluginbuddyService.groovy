@@ -8,9 +8,11 @@ class PluginbuddyService {
 	 def returnAppVersion() {
 		def gver=grailsApplication.metadata['app.grails.version']
 		double verify=getGrailsVersion(gver)
-		def gfolder="resources"
+		def gfolder
 		if (verify >= 2.4 ) {
 			gfolder="assets"
+		}else{
+			gfolder="resources"
 		}
 		return gfolder
 	}

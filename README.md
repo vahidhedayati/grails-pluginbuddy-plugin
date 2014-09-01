@@ -167,6 +167,9 @@ def pluginbuddyService
 
 ##Version info:
 ```
+0.3	: 	0.2 appeared to only display assets for some strange reason on resources sites it showed up blank.
+		Hopefully fixed now.
+
 0.2 : 	Tidy up plugin title in main plugin definition.
 		Added returnObjectForTags in taglib
 		

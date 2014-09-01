@@ -1,5 +1,5 @@
 class PluginbuddyGrailsPlugin {
-    def version = "0.2"
+    def version = "0.3"
     def grailsVersion = "2.0 > *"
     def title = "Pluginbuddy identifies resources/assets from enduser app version"
     def description = 'Outputs resources or assets for you to decide on what to do within your plugin. Does the calculation for your plugin to output according to end users resources/assets based sites,'
